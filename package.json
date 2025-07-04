@@ -1,0 +1,15 @@
+{
+  "name": "chat-airguard",
+  "version": "1.0.0",
+  "description": "Chat informativo con conexión a MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.0.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.6.1",
+    "open": "^10.1.2"
+  }
+}

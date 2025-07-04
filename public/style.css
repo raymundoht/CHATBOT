@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+p {
+  color: #7f8c8d;
+  font-size: 16px;
+}
+
+.chat-form label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.chat-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #bdc3c7;
+  background-color: #fdfdfd;
+  font-size: 16px;
+}
+
+.respuesta-box {
+  margin-top: 25px;
+  padding: 15px 20px;
+  background-color: #ecf9f2;
+  border-left: 5px solid #27ae60;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
