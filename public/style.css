@@ -1,65 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-* {
-  box-sizing: border-box;
-}
-
+/* Estilos personalizados para complementar Tailwind */
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f4f6f8;
-  margin: 0;
-  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
-.container {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 20px 30px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+/* Animación para la aparición de la respuesta en el modal */
+#respuesta-card.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 30px;
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
 }
 
-h1 {
-  margin: 0;
-  font-size: 28px;
-  color: #2c3e50;
-}
-
-p {
-  color: #7f8c8d;
-  font-size: 16px;
-}
-
-.chat-form label {
-  display: block;
-  margin-top: 20px;
-  font-weight: bold;
-  color: #34495e;
-}
-
-.chat-form select {
-  width: 100%;
+.historial-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+  border: 1px solid #1880a2;
+  border-radius: 5px;
+  margin-top: 10px;
   padding: 10px;
-  margin-top: 5px;
-  border-radius: 6px;
-  border: 1px solid #bdc3c7;
-  background-color: #fdfdfd;
-  font-size: 16px;
+  background-color: #0f4249;
 }
-
-.respuesta-box {
-  margin-top: 25px;
-  padding: 15px 20px;
-  background-color: #ecf9f2;
-  border-left: 5px solid #27ae60;
-  border-radius: 8px;
-  font-size: 16px;
-  color: #2c3e50;
-}
-

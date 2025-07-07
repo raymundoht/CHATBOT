@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Historial de Preguntas</title>
+</head>
+<body>
+  <!-- Título de la página -->
+  <h2>Historial de Preguntas</h2>
+
+  <!-- Lista donde se mostrarán las preguntas del historial -->
+  <ul id="lista-historial"></ul>
+
+  <script type="module">
+    // Espera a que el DOM esté listo
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Obtiene el ID del usuario desde el localStorage
+      const userId = localStorage.getItem('user_id');
+      if (!userId) return; // Si no hay ID, no hace nada
+
+      // Consulta el historial desde la API
+      const res = await fetch(`/api/historial/${userId}`);
+      const historial = await res.json();
+
+      // Muestra cada pregunta en la lista
+      const lista = document.getElementById('lista-historial');
+      historial.forEach(item => {
+        const li = document.createElement('li');
+
+        // Formatea la fecha de la pregunta
+        const fecha = new Date(item.fecha).toLocaleString();
+
+        // Texto: "fecha: pregunta"
+        li.textContent = `${fecha}: ${item.pregunta}`;
+
+        // Agrega la entrada a la lista
+        lista.appendChild(li);
+      });
+    });
+  </script>
+</body>
+</html>
